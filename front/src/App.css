@@ -1,0 +1,924 @@
+/* Nav */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head h1 {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+}
+
+.list a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.list a:hover {
+  color: lightblue;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list {
+    margin-top: 20px;
+  }
+
+  .list a {
+    font-size: 14px;
+  }
+}
+.bgimg img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/*------------------------------------------------------------------------*/
+
+
+/* 'fbtn' */
+button.fbtn {
+  background-color: black; 
+  color: white; 
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  cursor: pointer; 
+}
+
+
+button.fbtn:hover {
+  opacity: 0.8; 
+}
+
+
+/* Login */
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.login-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 320px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-link {
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+
+/*------------------------------------------------------------------------*/
+
+/* Register.css */
+
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  margin-top: 45px;
+}
+
+.register-form {
+  width: 400px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.select-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #ffffff; /* Ensure consistent background color for select */
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.login-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/*------------------------------------------------------------------------*/
+
+
+.home_container {
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  color:black;
+}
+
+.main{
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+
+.sub {
+  font-size: 24px;
+}
+/*------------------------------------------------------------------------*/
+
+/* About us*/
+
+.about-us-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0;
+  padding-left: 20px;
+  border-left: 3px solid #007bff;
+  color: #333;
+}
+
+.contact-info {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+
+@media (max-width: 600px) {
+  .about-us-container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p,
+  .contact-info {
+    font-size: 14px;
+  }
+}
+
+/*------------------------------------------------------------------------*/
+/* Adminview */
+
+.admin-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.admin-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/*------------------------------------------------------------------------*/
+
+
+.welcome-container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.welcome-heading {
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* font-family: 'Arial', sans-serif;  */
+}
+
+
+
+/* AgencyProfile */
+
+.agency-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.profile-box {
+  background-color: #edd4d4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  margin-top: 10px;
+}
+
+.update-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*------------------------------------------------------------------------*/
+
+/* Property */
+
+
+.create-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cinput-group {
+  margin-bottom: 15px;
+}
+
+.cinput-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cinput-group input,
+.cinput-group textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cinput-group textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+.cinput-group input[type="file"] {
+  padding: 10px 0; /* Adjust padding for file input */
+}
+
+.cbutton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.cbutton:hover {
+  background-color: #45a049;
+}
+
+/*------------------------------------------------------------------------*/
+/* contacts */
+
+
+.contact {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.contact-form form {
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.success {
+  color: #28a745;
+}
+
+.danger {
+  color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  .contact-image,
+  .contact-form {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .contact-form textarea {
+    height: 120px; /* Adjust textarea height for smaller screens */
+  }
+}
+
+/*------------------------------------------------------------------------*/
+/* Booking */
+
+
+.booking-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='date'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type='submit'] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type='submit']:hover {
+  background-color: #0056b3;
+}
+
+
+/*------------------------------------------------------------------------*/
+
+/* property details */
+
+
+.property-details-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.details {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.property-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.property-image-container {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  overflow: hidden; /* Hide any content that overflows the container */
+  border-radius: 8px;
+}
+
+.property-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+.property-description {
+  font-size: 16px;
+  color: #666;
+}
+
+.book-now-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.book-now-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+/* Propertyview */
+
+/* .head {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px; 
+} */
+
+.agency-properties-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.property-card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px; 
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.property-card .card-body {
+  padding: 15px;
+}
+
+.property-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .property-card {
+    width: 100%; 
+  }
+}
+
+
+
+/* BookingDetails.css */
+
+.container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.property-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.property-item p {
+  margin: 5px 0;
+}
+
+.property-item p strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/*  propertyhandle */
+
+.property-container {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.properties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-container {
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.no-properties {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+
+.property-details-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.details {
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.details h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.details img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.details .content {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.details button {
+  padding: 10px 20px;
+  background-color: hsl(246, 83%, 44%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.details button:hover {
+  background-color: #c82333;
+}
+
+
+
+/* CustomerPropertyView.css */
+
+/* Search Container Styles */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Card Container Styles */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 18px;
+}
