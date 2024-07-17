@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config()
 const bcrypt = require('bcrypt');
 const cors = require('cors');
 const jwt = require('jsonwebtoken')
@@ -9,14 +10,15 @@ const property = require('./models/property');
 const Booking = require('./models/Booking');
 const Property = require('./models/property');
 const app = express();
-const port = 4000;
-
+const port = process.env.PORT;
+require("dotenv").config
 
 app.use(express.json()); 
 app.use(cors());
 
+//mongodb://127.0.0.1:27017/ProjectREM
 
-mongoose.connect('mongodb://127.0.0.1:27017/ProjectREM', {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
