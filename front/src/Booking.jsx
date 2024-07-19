@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
+import { baseUrl } from './Urls';
 
 export const Booking = () => {
     const { id } = useParams();
@@ -30,7 +31,7 @@ export const Booking = () => {
     useEffect(() => {
         const fetchPropertyDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/details/${id}`);
+                const response = await axios.get(`${baseUrl}/details/${id}`);
                 setPropertyDetails(response.data);
             } catch (error) {
                 console.error('Error fetching property details:', error);
@@ -47,7 +48,7 @@ export const Booking = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4000/bookings', {
+            const response = await axios.post(`${baseUrl}/bookings`, {
                 propertyId: id,
                 propertyTitle: propertyDetails.title,
                 checkinDate: formData.checkinDate,

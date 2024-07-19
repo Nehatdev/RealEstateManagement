@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
 import axios from 'axios';
 import './App.css';
+import { baseUrl } from './Urls';
 
 const HomePropertyDetails = () => {
     const { id } = useParams();
@@ -13,7 +13,7 @@ const HomePropertyDetails = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/details/${id}`);
+                const response = await axios.get(`${baseUrl}/details/${id}`);
                 console.log(response.data);
                 setProperty(response.data);
             } catch (error) {
@@ -32,7 +32,7 @@ const HomePropertyDetails = () => {
             <div className="details container">
                 <h1>{property.title}</h1>
                 <div className="property-image-container">
-                    <img src={`http://localhost:4000/uploads/${property.image}`} alt="" />
+                    <img src={`${baseUrl}/uploads/${property.image}`} alt="" />
                 </div>
                 <div className="content">{property.description}</div>
 

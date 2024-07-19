@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
+import { baseUrl } from './Urls';
 
 export const AgencyHandle = () => {
     const { id } = useParams();
@@ -11,7 +12,7 @@ export const AgencyHandle = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(`http://localhost:4000/details/${id}`);
+            const response = await axios.get(`${baseUrl}/details/${id}`);
             setProperty(response.data);
         } catch (error) {
             console.error('Error fetching property:', error);
@@ -20,7 +21,7 @@ export const AgencyHandle = () => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:4000/details/${id}`);
+            await axios.delete(`${baseUrl}/details/${id}`);
             navigate('/adminpage/propertyhandle');
         } catch (error) {
             console.error('Error deleting property:', error);
@@ -35,7 +36,7 @@ export const AgencyHandle = () => {
         <section className="property-details-container">
             <div className="details container">
                 <h1>{property.title}</h1>
-                <img src={`http://localhost:4000/uploads/${property.image}`} alt="" />
+                <img src={`${baseUrl}/uploads/${property.image}`} alt="" />
                 <div className="content">{property.description}</div>
                 <button onClick={handleDelete}>Delete</button>
             </div>

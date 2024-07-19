@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import bimg from './bimg.jpg';
+import { baseUrl } from './Urls';
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Register = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:4000/insert', data);
+      const response = await axios.post(`${baseUrl}/insert`, data);
       window.alert('Registration successful');
       setData('');
       navigate('/login');

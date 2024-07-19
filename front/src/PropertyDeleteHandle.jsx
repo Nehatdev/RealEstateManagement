@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
+import { baseUrl } from './Urls';
 
 export const PropertyDeleteHandle = () => {
     const { id } = useParams();
@@ -11,9 +12,9 @@ export const PropertyDeleteHandle = () => {
 
     const fetchData = async () => {
         try {
-            const propertyResponse = await axios.get(`http://localhost:4000/details/${id}`);
+            const propertyResponse = await axios.get(`${baseUrl}/details/${id}`);
             setProperty(propertyResponse.data);
-            const agencyResponse = await axios.get(`http://localhost:4000/agencyprofile/${propertyResponse.data.user}`);
+            const agencyResponse = await axios.get(`${baseUrl}/agencyprofile/${propertyResponse.data.user}`);
             setAgency(agencyResponse.data);
         } catch (error) {
             console.error('Error fetching property or agency:', error);
@@ -22,7 +23,7 @@ export const PropertyDeleteHandle = () => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:4000/details/${id}`);
+            await axios.delete(`${baseUrl}/details/${id}`);
             navigate('/adminpage/propertyhandle');
         } catch (error) {
             console.error('Error deleting property:', error);
@@ -37,7 +38,7 @@ export const PropertyDeleteHandle = () => {
         <section className="property-details-container">
             <div className="details container">
                 <h1>{property.title}</h1>
-                <img src={`http://localhost:4000/uploads/${property.image}`} alt="" />
+                <img src={`${baseUrl}/uploads/${property.image}`} alt="" />
                 <div className="content">{property.description}</div>
                 <div className="agency-details">
                     <h3>Agency Details</h3>

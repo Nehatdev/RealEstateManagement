@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import { baseUrl } from './Urls';
 
 export const AgencyProfile = () => {
     const [agent, setAgencyData] = useState({
@@ -32,7 +33,7 @@ export const AgencyProfile = () => {
     const handleUpdate = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:4000/updateagencyprofile/${id}`, agent);
+            const response = await axios.put(`${baseUrl}/updateagencyprofile/${id}`, agent);
             if (response.data) {
                 localStorage.setItem('response', JSON.stringify(response.data));
                 window.alert('Profile Updated Successfully');

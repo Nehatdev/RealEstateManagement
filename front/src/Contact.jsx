@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "./contact-img.svg";
-import './App.css'; // Import custom CSS for Contact component
+import './App.css';
 import TrackVisibility from 'react-on-screen';
+import { baseUrl } from "./Urls";
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -28,7 +29,7 @@ export const Contact = () => {
     setButtonText("Sending...");
     
     try {
-      const response = await fetch("http://localhost:5000/contact", {
+      const response = await fetch(`${baseUrl}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",

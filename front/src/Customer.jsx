@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css'
+import { baseUrl } from './Urls';
 
 export const Customer = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        // Fetch all users
-        axios.get('http://localhost:4000/users')
+        
+        axios.get(`${baseUrl}/users`)
             .then(response => {
                 setUsers(response.data);
             })

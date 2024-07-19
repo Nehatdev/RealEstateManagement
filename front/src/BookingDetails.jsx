@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css'; 
+import { baseUrl } from './Urls';
 
 const BookingDetails = () => {
     const [bookings, setBookings] = useState([]);
@@ -9,7 +10,7 @@ const BookingDetails = () => {
     useEffect(() => {
         const fetchBookings = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/bookings/agent/${agencyId}`);
+                const response = await axios.get(`${baseUrl}/bookings/agent/${agencyId}`);
                 setBookings(response.data);
             } catch (error) {
                 console.error('Error fetching bookings:', error);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import { baseUrl } from './Urls';
 
 export const Agency = () => {
     const [agencies, setAgencies] = useState([]);
@@ -8,7 +9,7 @@ export const Agency = () => {
     useEffect(() => {
         const fetchAgency = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/agent');
+                const response = await axios.get(`${baseUrl}/agent`);
                 setAgencies(response.data);
             } catch (error) {
                 console.error('Error fetching agencies:', error);
@@ -20,7 +21,7 @@ export const Agency = () => {
 
     const verifyAgency = async (agentId,status) => {
         try {
-            const response = await axios.put(`http://localhost:4000/agencyverification/${agentId}`,{status});
+            const response = await axios.put(`${baseUrl}/agencyverification/${agentId}`,{status});
             console.log('Response:', response);
 
             // Update the agencies state to mark the agent as verified

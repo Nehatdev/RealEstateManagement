@@ -3,6 +3,7 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import './App.css'; 
+import { baseUrl } from './Urls';
 
 
   export const PropertyHandle = () => {
@@ -15,7 +16,7 @@ import './App.css';
 
   const getProperties = async () => {
     try {
-      let response = await axios.get('http://localhost:4000/properties');
+      let response = await axios.get(`${baseUrl}/properties`);
       console.log(response.data);
       setProperties(response.data);
     } catch (error) {
@@ -30,7 +31,7 @@ import './App.css';
           properties.map(item => (
             <div key={item._id} className='card-container'>
               <Card className='card' onClick={() => { navigate(`/adminpage/Propertydeletehandle/${item._id}`) }}>
-                <Card.Img variant="top" src={`http://localhost:4000/uploads/${item.image}`} alt="property" width={'200px'} height={'200px'} />
+                <Card.Img variant="top" src={`${baseUrl}/uploads/${item.image}`} alt="property" width={'200px'} height={'200px'} />
                 <Card.Body className="property-details">
                   <Card.Title className='card-title'>
                     <h2>{item.title}</h2>

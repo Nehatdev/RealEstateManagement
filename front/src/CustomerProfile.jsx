@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import { baseUrl } from './Urls';
 
 export const CustomerProfile = () => {
     const [customer, setCustomerData] = useState({
@@ -15,7 +16,7 @@ export const CustomerProfile = () => {
     useEffect(() => {
         const fetchCustomerData = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/customerprofile/${id}`);
+                const response = await axios.get(`${baseUrl}/customerprofile/${id}`);
                 setCustomerData(response.data);
             } catch (error) {
                 console.error('Error fetching customer data:', error);
@@ -32,7 +33,7 @@ export const CustomerProfile = () => {
     const handleUpdate = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:4000/updatecustomerprofile/${id}`, customer);
+            const response = await axios.put(`${baseUrl}/updatecustomerprofile/${id}`, customer);
             if (response.data) {
                 localStorage.setItem('response', JSON.stringify(response.data));
                 window.alert('Profile Updated Successfully');

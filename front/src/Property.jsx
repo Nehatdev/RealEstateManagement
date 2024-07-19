@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
 import './App.css';
+import { baseUrl } from './Urls';
 
 export const Property = () => {
   const [propertyData, setPropertyData] = useState({
@@ -42,7 +42,7 @@ export const Property = () => {
       formData.append('user', localStorage.getItem('id'));
       formData.append('status', postData.status);
 
-      const response = await axios.post('http://localhost:4000/addproperty', formData, {
+      const response = await axios.post(`${baseUrl}/addproperty`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 

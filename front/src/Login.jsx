@@ -3,6 +3,7 @@ import axios from 'axios';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './App.css'
 import bimg from './bimg.jpg'
+import { baseUrl } from './Urls';
 
 const Login = () => {
   const [data, setData] = useState({
@@ -30,7 +31,7 @@ const Login = () => {
         navigate('/adminpage');
         window.alert('Admin login successful!');
       } else {
-        let response = await axios.post('http://localhost:4000/login', data);
+        let response = await axios.post(`${baseUrl}/login`, data);
 
         if (response.data.status) {
           const { _id: id, roles } = response.data.data;
